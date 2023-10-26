@@ -17,6 +17,8 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("connected to server");
   });
+  conn.write("Name: GWM"); {
+  };
   conn.on("data", (data) => {
     console.log("Server says:", data);
   });
