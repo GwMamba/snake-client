@@ -17,6 +17,8 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("connected to server");
   });
+
+  // Prints this to send a message to the server. 
   conn.write("Name: GWM"); {
   };
   conn.on("data", (data) => {
@@ -25,7 +27,4 @@ const connect = function() {
 
   return conn;
 };
-console.log("connecting...");
-connect();
-
-module.exports = connect;
+module.exports = { connect };
